@@ -1,4 +1,5 @@
-require 'rake'
+lib = File.expand_path('../lib/', __FILE__)
+$LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 
 # encoding: UTF-8
 Gem::Specification.new do |s|
@@ -9,15 +10,15 @@ Gem::Specification.new do |s|
   s.description = 'This is a gem which helps to add video to each product on spree and defaulty displays an empty image'
   s.required_ruby_version = '>= 2.1.0'
 
-  s.files = FileList['lib/*','app/*','bin/*','config/*','db/*','[A-Z]*',
-                      'lib/spree_video/*','lib/generators/spree_video/install/*'].to_a
+  s.files        = `git ls-files`.split("\n")
+  s.test_files   = `git ls-files -- spec/*`.split("\n")
 
   s.author    = 'Chashmeet Singh'
   s.email     = 'chashmeetsingh@gmail.com'
   s.homepage  = 'http://www.chashmeetsingh.com'
 
   s.require_path = 'lib'
-  s.requirements << 'rails g spree_video:install'
+  s.requirements << 'none'
   s.homepage = 'http://rubygems.org/gems/spree_video'
   s.add_dependency 'spree_core'
   s.license = 'MIT'
