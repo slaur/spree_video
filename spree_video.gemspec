@@ -5,7 +5,7 @@ $LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_video'
-  s.version     = '1.0.3'
+  s.version     = '1.0.4'
   s.summary     = 'Adds Video to Each Product'
   s.description = 'This is a gem which helps to add video to each product on spree and defaulty displays an empty image'
   s.required_ruby_version = '>= 2.1.0'
