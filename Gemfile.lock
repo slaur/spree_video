@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    spree_video (1.0.3)
+    spree_video (1.0.4)
       spree_core
 
 GEM
@@ -362,4 +362,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   1.12.3
+   1.16.1
